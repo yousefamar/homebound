@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homebound</title>
+		<link rel="stylesheet" href="style.css"></link>
+		<script src="src/utils.js"></script>
+		<script src="src/homebound.js"></script>
+		<script src="src/scenes.js"></script>
+		<script src="src/entities.js"></script>
+	</head>
+
+	<body onload="HB.main();">
+		<div id="game" class="center">
+			<canvas id="canvas" width="800" height="450"></canvas>
+			<div id="overlay" class="visible">
+				<div id="info">
+					<div id="timer"></div>
+					<div id="fuel"></div>
+				</div>
+				<button id="playButton">▶</button>
+				<button id="codeButton">{}</button>
+				<textarea spellcheck="false" wrap="off" id="editor" class="invisible"># <- (Click again to close)
+# Ship Navigation Script
+# By Terry B. L. Engineer
+# Last updated: 2148-10-31
+
+# Turn ship towards home
+rotate 80
+
+# Thruster boost for 1 tick
+thrust 10
+wait 1
+thrust 0
+
+# Glide for 2000 ticks
+wait 2000
+
+# Rotate back to correct orientation
+rotate -35
+
+# Set thrusters to slowly accelerate
+thrust 1
+
+# ...
+wait 1000
+
+# Another failed attempt.
+# To my successor: please return us to our families through the wormhole^.
+# We've been stranded for too long!
+
+# (resize) ----&gt;</textarea>
+				<div id="winScreen" class="invisible">
+					<h1>A Winner is You!</h1>
+					<p>You did it! You saved us all! Mother, I thought I'd never see you again!</p>
+					<br>
+					<p>Want to do more scripting? The universe is nothing but raw JavaScript; have at it! Otherwise refresh for a new random seed.</p>
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+<html>
