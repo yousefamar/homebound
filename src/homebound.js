@@ -47,7 +47,7 @@ var HB = {
 		var canvas = document.getElementById('canvas');
 
 		if (window.location === window.parent.location)
-			canvas.style.marginTop = '100px';
+			canvas.parentElement.style.marginTop = '100px';
 
 		const TICK_INTERVAL_MS = 1000.0/100.0;
 
